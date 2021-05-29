@@ -436,6 +436,10 @@ body {
   margin: 2rem 1rem;
 }
 
+#project .proj-img-div:hover {
+  cursor: pointer;
+}
+
 #project .img1 {
   position: relative;
   top: 0rem;
@@ -527,6 +531,11 @@ body {
   background-color: #9a3251;
 }
 
+.hidden-div .arrow .arrow-lft:hover,
+.hidden-div .arrow .arrow-rgt:hover {
+  cursor: pointer;
+}
+
 .hidden-div .arrow .arrow-rgt {
   float: right;
 }
@@ -553,10 +562,18 @@ body {
   border: none;
 }
 
+.hidden-div .content .button .btn-hidden:hover {
+  cursor: pointer;
+}
+
 .hidden-div .content .button .close {
   float: right;
   color: white;
   font-size: 2rem;
+}
+
+.hidden-div .content .button .close:hover {
+  cursor: pointer;
 }
 
 .footr {

@@ -334,6 +334,9 @@ body {
   .proj-img-div {
     height: 10rem;
     margin: 2rem 1rem;
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .img1 {
@@ -400,6 +403,9 @@ body {
       font-size: 2rem;
       padding: 0.4rem;
       background-color: rgb(154, 50, 81);
+      &:hover {
+        cursor: pointer;
+      }
     }
     .arrow-rgt {
       float: right;
@@ -417,11 +423,17 @@ body {
         color: white;
         padding: 0.5rem;
         border: none;
+        &:hover {
+          cursor: pointer;
+        }
       }
       .close {
         float: right;
         color: white;
         font-size: 2rem;
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }
