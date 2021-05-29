@@ -1,0 +1,587 @@
+$primary-color: 2a2a2a;
+$text-color: #fff;
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+);
+@mixin flex($justify-content, $align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #19406a;
+  font-family: "Roboto", sans-serif;
+  color: $text-color;
+}
+
+#hero-div {
+  width: 100vw;
+  height: 100vh;
+}
+
+// nav section
+#nav {
+  width: 100%;
+  height: 3rem;
+  float: right;
+  .btn {
+    padding: 0.3rem;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: $text-color;
+    margin: 1rem 2rem;
+    float: right;
+    border: 0.2rem solid white;
+    &:hover {
+      cursor: pointer;
+      background-color: red;
+      transition: background-color 0.4s linear;
+      border: 0.2rem solid red;
+      transition: border 0.4s linear;
+    }
+  }
+}
+// header section
+.header {
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  @include flex(center, center);
+}
+
+.intro {
+  width: 50%;
+  height: 100vh;
+  flex-direction: column;
+  @include flex(center, center);
+}
+
+.name-hello {
+  font-size: 2rem;
+}
+
+.name {
+  font-size: 5rem;
+  color: #f50000a8;
+  font-family: "Raleway";
+  &:hover {
+    font-size: 3rem;
+    padding: 10px;
+    cursor: pointer;
+  }
+}
+
+.intro .name {
+  position: relative;
+  animation-name: nameAnimate;
+  animation-duration: 1s;
+}
+
+@keyframes nameAnimate {
+  0% {
+    left: 300px;
+    top: 0px;
+  }
+  25% {
+  }
+  100% {
+    left: 0;
+    top: 0px;
+  }
+}
+
+.arrow-div {
+  height: 3rem;
+  .down-arrow {
+    margin-top: 2rem;
+    font-size: 2rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .down-arrow-animate {
+    position: relative;
+    animation-name: down;
+    animation-duration: 2s;
+  }
+
+  @keyframes down {
+    0% {
+      margin-top: 2rem;
+    }
+    50% {
+      margin-top: 3rem;
+    }
+  }
+}
+
+// About
+
+.about {
+  width: 100vw;
+  height: 100vh;
+  background-color: lavenderblush;
+}
+#heading-about {
+  padding-top: 3rem;
+  text-align: center;
+  font-size: 5rem;
+  color: #19406a;
+}
+
+.edu-div {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+// Work and Ed
+.edu-main {
+  display: flex;
+  width: 33.3%;
+  flex-direction: column;
+}
+
+.ed {
+  background-color: #19406a;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+  box-shadow: 5px 5px rgb(54, 75, 106) inset;
+}
+
+.icon {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+}
+
+.iconScroll {
+  position: relative;
+  animation-name: iconAnimate;
+  animation-duration: 1s;
+  top: 50%;
+}
+
+@keyframes iconAnimate {
+  0% {
+    left: 10rem;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+.ed-para {
+  color: #616161;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  font-size: 1rem;
+  padding-top: 1rem;
+}
+
+// skills section start
+.skils-display {
+  display: flex;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: lavenderblush;
+}
+
+#who-am-i {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img {
+  width: 50%;
+  height: 10rem;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+#myImg {
+  width: 50%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0.5rem 0.5rem 0.8rem #ddd1da;
+}
+.info {
+  width: 60%;
+  margin: 0 auto;
+  p {
+    color: #616161;
+  }
+}
+
+#progress {
+  width: 50%;
+}
+
+.box {
+  height: 2rem;
+  width: 100%;
+  background-color: rgb(195, 209, 215);
+  margin-bottom: 0.2rem;
+  position: relative;
+}
+
+.inner-box {
+  width: 20%;
+  height: 2rem;
+  background-color: #19406a;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  :nth-child(2) {
+    position: absolute;
+    left: 80%;
+  }
+}
+
+.inner-box-progress {
+  background-color: rgb(244, 31, 63);
+  transition: 2s linear;
+}
+
+// Why Career gap section
+
+.career-gap {
+  background-color: #ddd1da;
+  width: 100%;
+  height: 40rem;
+}
+
+.career-container {
+  width: 50%;
+  margin: 1rem auto;
+  position: relative;
+  height: auto;
+}
+
+.career-box1,
+.career-box2 {
+  width: 2rem;
+  height: 26rem;
+  display: inline-block;
+  background-color: rgb(244, 31, 63);
+}
+
+.career-box-animate {
+  position: relative;
+  background-color: #19406a;
+  animation-name: careerbox;
+  animation-duration: 3s;
+  left: 90%;
+}
+
+@keyframes careerbox {
+  0% {
+    left: 0%;
+    width: 5rem;
+  }
+  100% {
+    left: 90%;
+    width: 2rem;
+  }
+}
+
+.career-content {
+  position: absolute;
+  display: inline-block;
+  margin-top: 2rem;
+  p {
+    padding-bottom: 5rem;
+    font-size: 1.2rem;
+    color: #616161;
+  }
+}
+
+// projects section
+#project {
+  background-color: lavenderblush;
+  height: 30rem;
+  padding-bottom: 4rem;
+  position: relative;
+  .project-img-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  .proj-img-div {
+    height: 10rem;
+    margin: 2rem 1rem;
+  }
+
+  .img1 {
+    position: relative;
+    top: 0rem;
+    animation-name: img;
+    animation-duration: 2s;
+  }
+  .img2 {
+    position: relative;
+    animation-name: img;
+    animation-duration: 3s;
+  }
+  .img3 {
+    position: relative;
+    animation-name: img;
+    animation-duration: 4s;
+  }
+
+  @keyframes img {
+    from {
+      top: 8rem;
+    }
+    to {
+      top: 0rem;
+    }
+  }
+
+  .project-img {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0.5rem 0.5rem 0.8rem #ddd1da;
+    object-fit: contain;
+  }
+}
+
+// project hidden section
+.hidden-div {
+  background-color: #19406a;
+  width: 50%;
+  height: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 1;
+  display: none;
+  .hidden-img-container {
+    width: 100%;
+    height: 18rem;
+    background-color: yellow;
+    position: relative;
+    .hidden-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .arrow {
+    width: 100%;
+    position: absolute;
+    margin-top: -3rem;
+    .arrow-lft,
+    .arrow-rgt {
+      font-size: 2rem;
+      padding: 0.4rem;
+      background-color: rgb(154, 50, 81);
+    }
+    .arrow-rgt {
+      float: right;
+    }
+  }
+  .content {
+    margin-top: 0.2rem;
+    padding-left: 0.4rem;
+    .button {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.5rem;
+      .btn-hidden {
+        background-color: rgb(154, 50, 81);
+        color: white;
+        padding: 0.5rem;
+        border: none;
+      }
+      .close {
+        float: right;
+        color: white;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+// footer section
+
+.footr {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 15rem;
+  background-color: #1b242f;
+  #connect {
+    border-bottom: 0.3rem solid red;
+  }
+  #social-media {
+    margin-top: 1rem;
+    padding: 0.5rem 2rem;
+    color: $text-color;
+    background-color: #0077b5;
+  }
+  a {
+    text-decoration: none;
+  }
+  .footer-arrow {
+    font-size: 4rem;
+    color: rgb(154, 50, 81);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+// media query below 800px
+@media only screen and (max-width: 800px) {
+  #nav {
+    .btn {
+      padding: 0.3rem;
+      font-size: 1rem;
+    }
+  }
+
+  .intro {
+    width: 60%;
+    .name-hello {
+      font-size: 1rem;
+    }
+    .name {
+      font-size: 3.5rem;
+      &:hover {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  #heading-about {
+    font-size: 3rem;
+  }
+  #project {
+    background-color: lavenderblush;
+    height: 80rem;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .hidden-div {
+      width: 100vw;
+      height: 100vh;
+      .hidden-img-container {
+        width: 100vw;
+        height: 80vh;
+        .hidden-img {
+          width: 100vw;
+          height: 80vh;
+          object-fit: contain;
+        }
+      }
+    }
+    .project-img-container {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+    }
+    .proj-img-div {
+      height: 18rem;
+    }
+    .project-img {
+      object-fit: contain;
+    }
+    .img1,
+    .img2,
+    .img3 {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+// media query below 800px
+@media only screen and (max-width: 600px) {
+  .intro {
+    width: 70%;
+    .name-hello {
+      font-size: 1rem;
+    }
+    .name {
+      font-size: 3rem;
+      &:hover {
+        font-size: 1rem;
+      }
+    }
+  }
+  #heading-about {
+    font-size: 3rem;
+  }
+  .edu-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70rem;
+    padding-top: 1rem;
+    background-color: lavenderblush;
+  }
+  .skils-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #who-am-i {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    #progress {
+      width: 95%;
+    }
+  }
+  .career-gap {
+    height: 57rem;
+    .career-box1,
+    .career-box2 {
+      height: 40rem;
+    }
+  }
+  #project {
+    background-color: lavenderblush;
+    height: 65rem;
+    padding-bottom: 0;
+    .project-img-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .proj-img-div {
+      height: 12rem;
+    }
+    .project-img {
+      object-fit: cover;
+    }
+    .img1,
+    .img2,
+    .img3 {
+      margin-bottom: 3rem;
+    }
+  }
+}
