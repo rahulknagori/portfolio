@@ -217,11 +217,21 @@ function slide(value){
 }
 
 
-
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
 // close button for hidden div
 hiddenCloseBtn.addEventListener("click", ()=>{
+    closeFullscreen()
     hiddenDiv.style.display = "none";
     projImgContainer.style.pointerEvents = "auto";
     projImgContainer.style.opacity = "1";
 })
+
 
