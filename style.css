@@ -750,7 +750,7 @@ body {
   }
   #project {
     background-color: lavenderblush;
-    height: 65rem;
+    height: auto;
     padding-bottom: 0;
   }
   #project .project-img-container {

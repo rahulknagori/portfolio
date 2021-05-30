@@ -19,6 +19,20 @@ let visitWebBtn = document.querySelector(".btn-hidden")
 let btnHiddenLink = document.querySelector(".btn-hidden-link")
 let hiddenCloseBtn = document.querySelector(".close");
 
+
+function openFullscreen() {
+  if (hiddenDiv.requestFullscreen) {
+    hiddenDiv.requestFullscreen();
+  } else if (hiddenDiv.webkitRequestFullscreen) { /* Safari */
+    hiddenDiv.webkitRequestFullscreen();
+  } else if (hiddenDiv.msRequestFullscreen) { /* IE11 */
+    hiddenDiv.msRequestFullscreen();
+  }
+}
+
+
+
+
 // down arrow section
 let aboutDivHeight = about.clientHeight;
 downArrow.addEventListener('click', ()=>{
@@ -159,6 +173,9 @@ function projectDisplay(){
         if(hidden[i][0].id == e.currentTarget.dataset.id){
             indexValue = e.currentTarget.dataset.id;
             divDisplay()
+            if(document.body.clientWidth < 500){
+                openFullscreen()
+            }
             hiddenDiv.style.display = "block";
             hiddenImg.src  = hidden[indexValue][0].img
             hiddenDesc.textContent = hidden[indexValue][0].desc
