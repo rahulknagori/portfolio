@@ -228,7 +228,9 @@ function closeFullscreen() {
 }
 // close button for hidden div
 hiddenCloseBtn.addEventListener("click", ()=>{
-    closeFullscreen()
+    if(document.body.clientWidth < 500){
+        closeFullscreen()
+    }
     hiddenDiv.style.display = "none";
     projImgContainer.style.pointerEvents = "auto";
     projImgContainer.style.opacity = "1";

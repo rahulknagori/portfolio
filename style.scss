@@ -324,15 +324,15 @@ body {
 // projects section
 #project {
   background-color: lavenderblush;
-  height: 60%;
-  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
   position: relative;
   .project-img-container {
     display: flex;
     justify-content: space-around;
   }
   .proj-img-div {
-    height: 10rem;
     margin: 2rem 1rem;
     &:hover {
       cursor: pointer;
