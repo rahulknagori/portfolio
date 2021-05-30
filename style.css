@@ -14,14 +14,7 @@ body {
   color: #fff;
 }
 
-#hero-div {
-  width: 100vw;
-  height: 100vh;
-}
-
 #nav {
-  width: 100%;
-  height: 3rem;
   float: right;
 }
 
@@ -64,7 +57,7 @@ body {
           align-items: center;
 }
 
-.intro {
+.header .intro {
   width: 50%;
   height: 100vh;
   -webkit-box-orient: vertical;
@@ -82,23 +75,42 @@ body {
           align-items: center;
 }
 
-.name-hello {
+.header .intro .name-hello {
   font-size: 2rem;
 }
 
-.name {
+.header .intro .name {
   font-size: 5rem;
   color: #f50000a8;
   font-family: "Raleway";
 }
 
-.name:hover {
+.header .intro .name:hover {
   font-size: 3rem;
-  padding: 10px;
+  padding: 0.4rem;
   cursor: pointer;
 }
 
-.intro .name {
+.header .intro .setTim {
+  background-color: #f50000a8;
+  -webkit-transition: background-color 3s;
+  transition: background-color 3s;
+}
+
+.header .intro .arrow-div {
+  height: 3rem;
+}
+
+.header .intro .arrow-div .down-arrow {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+.header .intro .arrow-div .down-arrow:hover {
+  cursor: pointer;
+}
+
+.header .intro .name {
   position: relative;
   -webkit-animation-name: nameAnimate;
           animation-name: nameAnimate;
@@ -132,20 +144,7 @@ body {
   }
 }
 
-.arrow-div {
-  height: 3rem;
-}
-
-.arrow-div .down-arrow {
-  margin-top: 2rem;
-  font-size: 2rem;
-}
-
-.arrow-div .down-arrow:hover {
-  cursor: pointer;
-}
-
-.arrow-div .down-arrow-animate {
+.header .down-arrow-animate {
   position: relative;
   -webkit-animation-name: down;
           animation-name: down;
@@ -172,12 +171,10 @@ body {
 }
 
 .about {
-  width: 100vw;
-  height: 100vh;
   background-color: lavenderblush;
 }
 
-#heading-about {
+.about #heading-about {
   padding-top: 3rem;
   text-align: center;
   font-size: 5rem;
@@ -193,7 +190,7 @@ body {
       justify-content: space-around;
 }
 
-.edu-main {
+.edu-div .edu-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,7 +201,7 @@ body {
           flex-direction: column;
 }
 
-.ed {
+.edu-div .edu-main .ed {
   background-color: #19406a;
   width: 10rem;
   height: 10rem;
@@ -215,7 +212,7 @@ body {
           box-shadow: 5px 5px #364b6a inset;
 }
 
-.icon {
+.edu-div .edu-main .ed .icon {
   position: absolute;
   color: white;
   top: 50%;
@@ -270,7 +267,7 @@ body {
   background-color: lavenderblush;
 }
 
-#who-am-i {
+.skils-display #who-am-i {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -284,7 +281,7 @@ body {
           align-items: center;
 }
 
-.img {
+.skils-display #who-am-i .img {
   width: 20rem;
   height: 10rem;
   display: -webkit-box;
@@ -297,7 +294,7 @@ body {
   padding-bottom: 1rem;
 }
 
-#myImg {
+.skils-display #who-am-i .img #myImg {
   width: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -316,18 +313,18 @@ body {
 }
 
 #progress {
-  width: 50%;
+  width: 48%;
 }
 
-.box {
-  height: 2rem;
+#progress .box {
   width: 100%;
+  height: 2rem;
   background-color: #c3d1d7;
   margin-bottom: 0.2rem;
   position: relative;
 }
 
-.inner-box {
+#progress .box .inner-box {
   width: 20%;
   height: 2rem;
   background-color: #19406a;
@@ -340,7 +337,7 @@ body {
   padding-left: 1rem;
 }
 
-.inner-box :nth-child(2) {
+#progress .box .inner-box :nth-child(2) {
   position: absolute;
   left: 80%;
 }
@@ -353,8 +350,13 @@ body {
 
 .career-gap {
   background-color: #ddd1da;
-  width: 100%;
-  height: 40rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .career-container {
@@ -364,21 +366,37 @@ body {
   height: auto;
 }
 
-.career-box1,
-.career-box2 {
+.career-container .career-box1,
+.career-container .career-box2 {
   width: 2rem;
   height: 26rem;
   display: inline-block;
   background-color: #f41f3f;
 }
 
+.career-container .career-box2 {
+  background-color: #19406a;
+}
+
+.career-container .career-content {
+  position: absolute;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.career-container .career-content p {
+  padding-bottom: 5rem;
+  font-size: 1.2rem;
+  color: #616161;
+}
+
 .career-box-animate {
   position: relative;
-  background-color: #19406a;
   -webkit-animation-name: careerbox;
           animation-name: careerbox;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
+  background-color: #19406a;
   left: 90%;
 }
 
@@ -402,18 +420,6 @@ body {
     left: 90%;
     width: 2rem;
   }
-}
-
-.career-content {
-  position: absolute;
-  display: inline-block;
-  margin-top: 2rem;
-}
-
-.career-content p {
-  padding-bottom: 5rem;
-  font-size: 1.2rem;
-  color: #616161;
 }
 
 #project {
@@ -446,8 +452,8 @@ body {
 }
 
 #project .img1 {
-  position: relative;
   top: 0rem;
+  position: relative;
   -webkit-animation-name: img;
           animation-name: img;
   -webkit-animation-duration: 2s;
@@ -489,18 +495,17 @@ body {
 }
 
 #project .project-img {
-  width: 100%;
   border-radius: 0.5rem;
   -webkit-box-shadow: 0.5rem 0.5rem 0.8rem #ddd1da;
           box-shadow: 0.5rem 0.5rem 0.8rem #ddd1da;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 
 .hidden-div {
   background-color: #19406a;
   width: 40%;
-  height: 73%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -511,14 +516,11 @@ body {
 
 .hidden-div .hidden-img-container {
   width: 100%;
-  height: auto;
-  background-color: yellow;
   position: relative;
 }
 
 .hidden-div .hidden-img-container .hidden-img {
   width: 100%;
-  height: auto;
   background-color: pink;
   -o-object-fit: cover;
      object-fit: cover;
@@ -552,6 +554,7 @@ body {
 }
 
 .hidden-div .content .button {
+  margin-bottom: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -583,7 +586,6 @@ body {
 }
 
 .footr {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -625,25 +627,22 @@ body {
     padding: 0.3rem;
     font-size: 1rem;
   }
-  .intro {
+  .header .intro {
     width: 60%;
   }
-  .intro .name-hello {
+  .header .intro .name-hello {
+    font-size: 1.5rem;
+  }
+  .header .intro .name {
+    font-size: 4rem;
+  }
+  .header .intro .name:hover {
     font-size: 1rem;
   }
-  .intro .name {
-    font-size: 3.5rem;
-  }
-  .intro .name:hover {
-    font-size: 1rem;
-  }
-  #heading-about {
+  .about #heading-about {
     font-size: 3rem;
   }
   #project {
-    background-color: lavenderblush;
-    height: 80rem;
-    padding-bottom: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -657,17 +656,6 @@ body {
   }
   #project .hidden-div {
     width: 100vw;
-    height: 100vh;
-  }
-  #project .hidden-div .hidden-img-container {
-    width: 100%;
-    height: auto;
-  }
-  #project .hidden-div .hidden-img-container .hidden-img {
-    width: 100vw;
-    height: auto;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
   #project .project-img-container {
     width: 90%;
@@ -679,35 +667,20 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #project .proj-img-div {
-    height: 18rem;
-  }
-  #project .project-img {
-    -o-object-fit: contain;
-       object-fit: contain;
-  }
-  #project .img1,
-  #project .img2,
-  #project .img3 {
-    margin-bottom: 3rem;
-  }
 }
 
 @media only screen and (max-width: 600px) {
-  .intro {
+  .header .intro {
     width: 70%;
   }
-  .intro .name-hello {
+  .header .intro .name-hello {
     font-size: 1rem;
   }
-  .intro .name {
+  .header .intro .name {
     font-size: 3rem;
   }
-  .intro .name:hover {
+  .header .intro .name:hover {
     font-size: 1rem;
-  }
-  #heading-about {
-    font-size: 3rem;
   }
   .edu-div {
     display: -webkit-box;
@@ -720,7 +693,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 70rem;
+    height: 50rem;
     padding-top: 1rem;
     background-color: lavenderblush;
   }
@@ -746,38 +719,9 @@ body {
   .skils-display #progress {
     width: 95%;
   }
-  .career-gap {
-    height: 57rem;
-  }
   .career-gap .career-box1,
   .career-gap .career-box2 {
     height: 40rem;
-  }
-  #project {
-    background-color: lavenderblush;
-    height: auto;
-    padding-bottom: 0;
-  }
-  #project .project-img-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  #project .proj-img-div {
-    height: 12rem;
-  }
-  #project .project-img {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  #project .img1,
-  #project .img2,
-  #project .img3 {
-    margin-bottom: 3rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

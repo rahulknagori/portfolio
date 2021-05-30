@@ -1,5 +1,6 @@
 $primary-color: 2a2a2a;
 $text-color: #fff;
+$body-background-color: #19406a;
 $font-weights: (
   "regular": 400,
   "medium": 500,
@@ -10,6 +11,23 @@ $font-weights: (
   justify-content: $justify-content;
   align-items: $align-items;
 }
+
+@mixin width-height($widVal, $heightVal) {
+  width: $widVal;
+  height: $heightVal;
+}
+
+@mixin animate($name, $time) {
+  position: relative;
+  animation-name: $name;
+  animation-duration: $time;
+}
+
+@mixin flex-dir($display, $jstfyContent) {
+  display: $display;
+  justify-content: $jstfyContent;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -21,20 +39,13 @@ html {
 }
 
 body {
-  background-color: #19406a;
+  background-color: $body-background-color;
   font-family: "Roboto", sans-serif;
   color: $text-color;
 }
 
-#hero-div {
-  width: 100vw;
-  height: 100vh;
-}
-
 // nav section
 #nav {
-  width: 100%;
-  height: 3rem;
   float: right;
   .btn {
     padding: 0.3rem;
@@ -60,63 +71,58 @@ body {
   height: 100vh;
   flex-direction: column;
   @include flex(center, center);
-}
-
-.intro {
-  width: 50%;
-  height: 100vh;
-  flex-direction: column;
-  @include flex(center, center);
-}
-
-.name-hello {
-  font-size: 2rem;
-}
-
-.name {
-  font-size: 5rem;
-  color: #f50000a8;
-  font-family: "Raleway";
-  &:hover {
-    font-size: 3rem;
-    padding: 10px;
-    cursor: pointer;
+  .intro {
+    @include width-height(50%, 100vh);
+    flex-direction: column;
+    @include flex(center, center);
+    .name-hello {
+      font-size: 2rem;
+    }
+    .name {
+      font-size: 5rem;
+      color: #f50000a8;
+      font-family: "Raleway";
+      &:hover {
+        font-size: 3rem;
+        padding: 0.4rem;
+        cursor: pointer;
+      }
+    }
+    .setTim {
+      background-color: #f50000a8;
+      transition: background-color 3s;
+    }
+    .arrow-div {
+      height: 3rem;
+      .down-arrow {
+        margin-top: 2rem;
+        font-size: 2rem;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
   }
-}
 
-.intro .name {
-  position: relative;
-  animation-name: nameAnimate;
-  animation-duration: 1s;
-}
+  .intro .name {
+    @include animate(nameAnimate, 1s);
+  }
 
-@keyframes nameAnimate {
-  0% {
-    left: 300px;
-    top: 0px;
-  }
-  25% {
-  }
-  100% {
-    left: 0;
-    top: 0px;
-  }
-}
-
-.arrow-div {
-  height: 3rem;
-  .down-arrow {
-    margin-top: 2rem;
-    font-size: 2rem;
-    &:hover {
-      cursor: pointer;
+  @keyframes nameAnimate {
+    0% {
+      left: 300px;
+      top: 0px;
+    }
+    25% {
+    }
+    100% {
+      left: 0;
+      top: 0px;
     }
   }
 
   .down-arrow-animate {
-    position: relative;
-    animation-name: down;
-    animation-duration: 2s;
+    @include animate(down, 2s);
   }
 
   @keyframes down {
@@ -128,60 +134,48 @@ body {
     }
   }
 }
-
 // About
-
 .about {
-  width: 100vw;
-  height: 100vh;
   background-color: lavenderblush;
-}
-#heading-about {
-  padding-top: 3rem;
-  text-align: center;
-  font-size: 5rem;
-  color: #19406a;
+  #heading-about {
+    padding-top: 3rem;
+    text-align: center;
+    font-size: 5rem;
+    color: #19406a;
+  }
 }
 
 .edu-div {
   padding-top: 3rem;
-  display: flex;
-  justify-content: space-around;
-}
-
-// Work and Ed
-.edu-main {
-  display: flex;
-  width: 33.3%;
-  flex-direction: column;
-}
-
-.ed {
-  background-color: #19406a;
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
-  position: relative;
-  margin: 0 auto;
-  box-shadow: 5px 5px rgb(54, 75, 106) inset;
-}
-
-.icon {
-  position: absolute;
-  color: white;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 5rem;
+  @include flex-dir(flex, space-around);
+  // Work and Ed
+  .edu-main {
+    display: flex;
+    width: 33.3%;
+    flex-direction: column;
+    .ed {
+      background-color: $body-background-color;
+      @include width-height(10rem, 10rem);
+      border-radius: 50%;
+      position: relative;
+      margin: 0 auto;
+      box-shadow: 5px 5px rgb(54, 75, 106) inset;
+      .icon {
+        position: absolute;
+        color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 5rem;
+      }
+    }
+  }
 }
 
 .iconScroll {
-  position: relative;
-  animation-name: iconAnimate;
-  animation-duration: 1s;
+  @include animate(iconAnimate, 1s);
   top: 50%;
 }
-
 @keyframes iconAnimate {
   0% {
     left: 10rem;
@@ -206,30 +200,28 @@ body {
   padding-top: 5rem;
   padding-bottom: 5rem;
   background-color: lavenderblush;
+  #who-am-i {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .img {
+      width: 20rem;
+      height: 10rem;
+      display: flex;
+      border-radius: 50%;
+      justify-content: center;
+      padding-bottom: 1rem;
+      #myImg {
+        width: 50%;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0.5rem 0.5rem 0.8rem #ddd1da;
+      }
+    }
+  }
 }
 
-#who-am-i {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.img {
-  width: 20rem;
-  height: 10rem;
-  display: flex;
-  border-radius: 50%;
-  justify-content: center;
-  padding-bottom: 1rem;
-}
-
-#myImg {
-  width: 50%;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0.5rem 0.5rem 0.8rem #ddd1da;
-}
 .info {
   width: 60%;
   margin: 0 auto;
@@ -239,41 +231,36 @@ body {
 }
 
 #progress {
-  width: 50%;
-}
-
-.box {
-  height: 2rem;
-  width: 100%;
-  background-color: rgb(195, 209, 215);
-  margin-bottom: 0.2rem;
-  position: relative;
-}
-
-.inner-box {
-  width: 20%;
-  height: 2rem;
-  background-color: #19406a;
-  display: flex;
-  align-items: center;
-  padding-left: 1rem;
-  :nth-child(2) {
-    position: absolute;
-    left: 80%;
+  width: 48%;
+  .box {
+    @include width-height(100%, 2rem);
+    background-color: rgb(195, 209, 215);
+    margin-bottom: 0.2rem;
+    position: relative;
+    .inner-box {
+      @include width-height(20%, 2rem);
+      background-color: $body-background-color;
+      display: flex;
+      align-items: center;
+      padding-left: 1rem;
+      :nth-child(2) {
+        position: absolute;
+        left: 80%;
+      }
+    }
   }
 }
-
+// linked to script js
 .inner-box-progress {
   background-color: rgb(244, 31, 63);
   transition: 2s linear;
 }
 
 // Why Career gap section
-
 .career-gap {
   background-color: #ddd1da;
-  width: 100%;
-  height: 40rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .career-container {
@@ -281,21 +268,31 @@ body {
   margin: 1rem auto;
   position: relative;
   height: auto;
-}
-
-.career-box1,
-.career-box2 {
-  width: 2rem;
-  height: 26rem;
-  display: inline-block;
-  background-color: rgb(244, 31, 63);
+  .career-box1,
+  .career-box2 {
+    width: 2rem;
+    height: 26rem;
+    display: inline-block;
+    background-color: rgb(244, 31, 63);
+  }
+  .career-box2 {
+    background-color: $body-background-color;
+  }
+  .career-content {
+    position: absolute;
+    display: inline-block;
+    margin-top: 2rem;
+    p {
+      padding-bottom: 5rem;
+      font-size: 1.2rem;
+      color: #616161;
+    }
+  }
 }
 
 .career-box-animate {
-  position: relative;
-  background-color: #19406a;
-  animation-name: careerbox;
-  animation-duration: 3s;
+  @include animate(careerbox, 3s);
+  background-color: $body-background-color;
   left: 90%;
 }
 
@@ -310,17 +307,6 @@ body {
   }
 }
 
-.career-content {
-  position: absolute;
-  display: inline-block;
-  margin-top: 2rem;
-  p {
-    padding-bottom: 5rem;
-    font-size: 1.2rem;
-    color: #616161;
-  }
-}
-
 // projects section
 #project {
   background-color: lavenderblush;
@@ -329,8 +315,7 @@ body {
   padding-bottom: 3rem;
   position: relative;
   .project-img-container {
-    display: flex;
-    justify-content: space-around;
+    @include flex-dir(flex, space-around);
   }
   .proj-img-div {
     margin: 2rem 1rem;
@@ -340,20 +325,14 @@ body {
   }
 
   .img1 {
-    position: relative;
     top: 0rem;
-    animation-name: img;
-    animation-duration: 2s;
+    @include animate(img, 2s);
   }
   .img2 {
-    position: relative;
-    animation-name: img;
-    animation-duration: 3s;
+    @include animate(img, 3s);
   }
   .img3 {
-    position: relative;
-    animation-name: img;
-    animation-duration: 4s;
+    @include animate(img, 4s);
   }
 
   @keyframes img {
@@ -366,18 +345,16 @@ body {
   }
 
   .project-img {
-    width: 100%;
     border-radius: 0.5rem;
     box-shadow: 0.5rem 0.5rem 0.8rem #ddd1da;
-    object-fit: contain;
   }
 }
 
 // project hidden section
 .hidden-div {
-  background-color: #19406a;
+  background-color: $body-background-color;
   width: 40%;
-  height: 73%;
+  display: flex;
   left: 50%;
   transform: translateX(-50%);
   position: absolute;
@@ -385,12 +362,9 @@ body {
   display: none;
   .hidden-img-container {
     width: 100%;
-    height: auto;
-    background-color: yellow;
     position: relative;
     .hidden-img {
       width: 100%;
-      height: auto;
       background-color: pink;
       object-fit: cover;
     }
@@ -416,8 +390,8 @@ body {
     margin-top: 0.2rem;
     padding-left: 0.4rem;
     .button {
-      display: flex;
-      justify-content: space-between;
+      margin-bottom: 0.5rem;
+      @include flex-dir(flex, space-between);
       margin-top: 0.5rem;
       .btn-hidden {
         background-color: rgb(154, 50, 81);
@@ -441,12 +415,8 @@ body {
 }
 
 // footer section
-
 .footr {
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  @include flex(space-around, center);
   height: 15rem;
   background-color: #1b242f;
   #connect {
@@ -478,85 +448,64 @@ body {
       font-size: 1rem;
     }
   }
-
-  .intro {
-    width: 60%;
-    .name-hello {
-      font-size: 1rem;
-    }
-    .name {
-      font-size: 3.5rem;
-      &:hover {
-        font-size: 1rem;
+  .header {
+    .intro {
+      width: 60%;
+      .name-hello {
+        font-size: 1.5rem;
+      }
+      .name {
+        font-size: 4rem;
+        &:hover {
+          font-size: 1rem;
+        }
       }
     }
   }
 
-  #heading-about {
-    font-size: 3rem;
+  .about {
+    #heading-about {
+      font-size: 3rem;
+    }
   }
 
   #project {
-    background-color: lavenderblush;
-    height: 80rem;
-    padding-bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     .hidden-div {
       width: 100vw;
-      height: 100vh;
-      .hidden-img-container {
-        width: 100%;
-        height: auto;
-        .hidden-img {
-          width: 100vw;
-          height: auto;
-          object-fit: cover;
-        }
-      }
     }
     .project-img-container {
       width: 90%;
       display: flex;
       flex-direction: column;
     }
-    .proj-img-div {
-      height: 18rem;
-    }
-    .project-img {
-      object-fit: contain;
-    }
-    .img1,
-    .img2,
-    .img3 {
-      margin-bottom: 3rem;
-    }
   }
 }
 
 // media query below 600px
 @media only screen and (max-width: 600px) {
-  .intro {
-    width: 70%;
-    .name-hello {
-      font-size: 1rem;
-    }
-    .name {
-      font-size: 3rem;
-      &:hover {
+  .header {
+    .intro {
+      width: 70%;
+      .name-hello {
         font-size: 1rem;
+      }
+      .name {
+        font-size: 3rem;
+        &:hover {
+          font-size: 1rem;
+        }
       }
     }
   }
-  #heading-about {
-    font-size: 3rem;
-  }
+
   .edu-div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 70rem;
+    height: 50rem;
     padding-top: 1rem;
     background-color: lavenderblush;
     .edu-main {
@@ -577,30 +526,9 @@ body {
   }
 
   .career-gap {
-    height: 57rem;
     .career-box1,
     .career-box2 {
       height: 40rem;
-    }
-  }
-  #project {
-    background-color: lavenderblush;
-    height: auto;
-    padding-bottom: 0;
-    .project-img-container {
-      display: flex;
-      flex-direction: column;
-    }
-    .proj-img-div {
-      height: 12rem;
-    }
-    .project-img {
-      object-fit: cover;
-    }
-    .img1,
-    .img2,
-    .img3 {
-      margin-bottom: 3rem;
     }
   }
 }

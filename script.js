@@ -1,4 +1,5 @@
 let nameAnimate = document.querySelector(".name")
+let introPara = document.querySelectorAll(".into-para")
 let downArrow = document.querySelector(".down-arrow")
 let about = document.querySelector(".about")
 let icon = document.querySelectorAll(".icon")
@@ -20,23 +21,33 @@ let btnHiddenLink = document.querySelector(".btn-hidden-link")
 let hiddenCloseBtn = document.querySelector(".close");
 
 
-function openFullscreen() {
-  if (hiddenDiv.requestFullscreen) {
-    hiddenDiv.requestFullscreen();
-  } else if (hiddenDiv.webkitRequestFullscreen) { /* Safari */
-    hiddenDiv.webkitRequestFullscreen();
-  } else if (hiddenDiv.msRequestFullscreen) { /* IE11 */
-    hiddenDiv.msRequestFullscreen();
-  }
-}
-
+// setTimeout for intro section
+async function setIntr(){
+    return setTimeout(()=>{
+    introPara[0].classList.add("setTim")
+    return 1;
+}, 2000)
+} 
+setIntr()
+.then((res)=>{
+    return setTimeout(()=>{
+    introPara[res].classList.add("setTim")
+    return 2;
+}, 5000)
+})
+.then((val)=>{
+    return setTimeout(()=>{
+    introPara[2].classList.add("setTim")
+    return 2;
+}, 10000)
+})
 
 
 
 // down arrow section
-let aboutDivHeight = about.clientHeight;
+let aboutDivHeight = about.getBoundingClientRect();
 downArrow.addEventListener('click', ()=>{
-    scrollToSmoothly((aboutDivHeight + 100), 400)
+    scrollToSmoothly((aboutDivHeight.top), 400)
 })
 
 setInterval(() => {
@@ -56,6 +67,7 @@ let value = projDiv.getBoundingClientRect();
 btn.addEventListener('click', function(e){
   scrollToSmoothly(value.top, 400)
 });
+
 function scrollToSmoothly(pos, time) {
     var currentPos = window.pageYOffset;
     var start = null;
@@ -164,7 +176,7 @@ let hidden = [[{
 
 
 // function to get the id of div clicked
-    let indexValue = 0
+let indexValue = 0
 
 function projectDisplay(){
     projImgDiv.forEach((each)=>{
@@ -216,6 +228,17 @@ function slide(value){
    btnHiddenLink.href = hidden[indexValue][value].link
 }
 
+
+// do this for mobile screen when hidden div pops up
+function openFullscreen() {
+  if (hiddenDiv.requestFullscreen) {
+    hiddenDiv.requestFullscreen();
+  } else if (hiddenDiv.webkitRequestFullscreen) { /* Safari */
+    hiddenDiv.webkitRequestFullscreen();
+  } else if (hiddenDiv.msRequestFullscreen) { /* IE11 */
+    hiddenDiv.msRequestFullscreen();
+  }
+}
 
 function closeFullscreen() {
   if (document.exitFullscreen) {
