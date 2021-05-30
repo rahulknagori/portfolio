@@ -324,7 +324,7 @@ body {
 // projects section
 #project {
   background-color: lavenderblush;
-  height: 30rem;
+  height: 60%;
   padding-bottom: 4rem;
   position: relative;
   .project-img-container {
@@ -376,8 +376,8 @@ body {
 // project hidden section
 .hidden-div {
   background-color: #19406a;
-  width: 50%;
-  height: 70%;
+  width: 40%;
+  height: 73%;
   left: 50%;
   transform: translateX(-50%);
   position: absolute;
@@ -385,13 +385,14 @@ body {
   display: none;
   .hidden-img-container {
     width: 100%;
-    height: 18rem;
+    height: auto;
     background-color: yellow;
     position: relative;
     .hidden-img {
       width: 100%;
-      height: 100%;
-      object-fit: contain;
+      height: auto;
+      background-color: pink;
+      object-fit: cover;
     }
   }
   .arrow {
@@ -442,6 +443,7 @@ body {
 // footer section
 
 .footr {
+  position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -504,12 +506,12 @@ body {
       width: 100vw;
       height: 100vh;
       .hidden-img-container {
-        width: 100vw;
-        height: 80vh;
+        width: 100%;
+        height: auto;
         .hidden-img {
           width: 100vw;
-          height: 80vh;
-          object-fit: contain;
+          height: auto;
+          object-fit: cover;
         }
       }
     }
@@ -573,11 +575,8 @@ body {
     }
   }
   .img {
-    height: auto;
-  }
-
-  #myImg {
-    width: 100%;
+    width: 50%;
+    height: 10rem;
   }
 
   .career-gap {

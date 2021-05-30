@@ -418,7 +418,7 @@ body {
 
 #project {
   background-color: lavenderblush;
-  height: 30rem;
+  height: 60%;
   padding-bottom: 4rem;
   position: relative;
 }
@@ -494,8 +494,8 @@ body {
 
 .hidden-div {
   background-color: #19406a;
-  width: 50%;
-  height: 70%;
+  width: 40%;
+  height: 73%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -506,16 +506,17 @@ body {
 
 .hidden-div .hidden-img-container {
   width: 100%;
-  height: 18rem;
+  height: auto;
   background-color: yellow;
   position: relative;
 }
 
 .hidden-div .hidden-img-container .hidden-img {
   width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: auto;
+  background-color: pink;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .hidden-div .arrow {
@@ -577,6 +578,7 @@ body {
 }
 
 .footr {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -653,14 +655,14 @@ body {
     height: 100vh;
   }
   #project .hidden-div .hidden-img-container {
-    width: 100vw;
-    height: 80vh;
+    width: 100%;
+    height: auto;
   }
   #project .hidden-div .hidden-img-container .hidden-img {
     width: 100vw;
-    height: 80vh;
-    -o-object-fit: contain;
-       object-fit: contain;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   #project .project-img-container {
     width: 90%;
@@ -740,10 +742,8 @@ body {
     width: 95%;
   }
   .img {
-    height: auto;
-  }
-  #myImg {
-    width: 100%;
+    width: 50%;
+    height: 10rem;
   }
   .career-gap {
     height: 57rem;
