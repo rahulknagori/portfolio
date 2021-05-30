@@ -70,20 +70,23 @@ window.onscroll = function() {scroll()};
 
 function scroll(){
     let pageyOffset = pageYOffset;
-    let iconoffSetValue = windowHeight/2 - 120;
-    if(pageyOffset > iconoffSetValue ){
+    let iconoffSetValue = windowHeight/2;
+    if(document.body.clientWidth < 500){
+        iconoffSetValue += 430; 
+    }
+    if(pageyOffset > iconoffSetValue){
         for(let i = 0; i<icon.length; i++){
             icon[i].classList.add("iconScroll")
         }
-    }  if(pageyOffset > iconoffSetValue + 500){
+    }  if(pageyOffset > iconoffSetValue + 620){
         for(let i = 0; i<innerBox.length; i++){
             innerBox[i].style.width = progressPercent[i].textContent;
             innerBox[i].classList.add("inner-box-progress")
         }
-        if(pageyOffset > (iconoffSetValue + 1000)){
+        if(pageyOffset > (iconoffSetValue + 1100)){
             careerBox.classList.add("career-box-animate")
         }
-        if((value.top) > pageyOffset - 600){
+        if(pageyOffset > iconoffSetValue + 1450){
             let arr = ["img1","img2","img3"]
             for(let i=0; i<projImgDiv.length; i++){
                 projImgDiv[i].classList.add(arr[i])

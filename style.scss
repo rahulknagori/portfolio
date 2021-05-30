@@ -556,6 +556,9 @@ body {
     height: 70rem;
     padding-top: 1rem;
     background-color: lavenderblush;
+    .edu-main {
+      width: 100%;
+    }
   }
   .skils-display {
     display: flex;
@@ -569,6 +572,14 @@ body {
       width: 95%;
     }
   }
+  .img {
+    height: auto;
+  }
+
+  #myImg {
+    width: 100%;
+  }
+
   .career-gap {
     height: 57rem;
     .career-box1,
