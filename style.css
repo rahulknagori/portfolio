@@ -723,5 +723,8 @@ body {
   .career-gap .career-box2 {
     height: 40rem;
   }
+  .career-gap .career-content .career-para {
+    font-size: 1rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
