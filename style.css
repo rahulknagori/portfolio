@@ -285,7 +285,7 @@ body {
 }
 
 .img {
-  width: 50%;
+  width: 20rem;
   height: 10rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -740,10 +740,6 @@ body {
   }
   .skils-display #progress {
     width: 95%;
-  }
-  .img {
-    width: 50%;
-    height: 10rem;
   }
   .career-gap {
     height: 57rem;
