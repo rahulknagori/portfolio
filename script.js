@@ -126,50 +126,50 @@ function scroll(){
 let hidden = [[{
     id: 0,
     img: "./images/school-app-images/1.png",
-    desc: "This website was built using vanilla JavaScript, CSS, and HTML",
+    desc: "This website was built using vanilla JavaScript, CSS, and HTML. This is not a mobile responsive website. This is responsive to tablet resolution",
     link: "https://rahulknagori.github.io/sellCourse/"
 
 },
 {
     img: "./images/school-app-images/2.png",
-    desc: "This website was built using vanilla JavaScript, CSS, and HTML",
+    desc: "This website was built using vanilla JavaScript, CSS, and HTML. This is not a mobile responsive website. This is responsive to tablet resolution",
     link: "https://rahulknagori.github.io/sellCourse/"
 },
 {
     img: "./images/school-app-images/4.png",
-    desc: "This website was built using vanilla JavaScript, CSS, and HTML",
+    desc: "This website was built using vanilla JavaScript, CSS, and HTML. This is not a mobile responsive website. This is responsive to tablet resolution",
     link: "https://rahulknagori.github.io/sellCourse/"
 },
 {
     img: "./images/school-app-images/3.png",
-    desc: "This website was built using vanilla JavaScript, CSS, and HTML",
+    desc: "This website was built using vanilla JavaScript, CSS, and HTML. This is not a mobile responsive website. This is responsive to tablet resolution",
     link: "https://rahulknagori.github.io/sellCourse/"
 }],
 [{
     id: 1,
     img: "./images/react-app-images/1.png",
-    desc: "This website was built using React Js, SCSS, and HTML",
+    desc: "This website was built using React Js, SCSS, and HTML. This is not a mobile responsive website. This is responsive to tablet resolution",
     link: "https://rahulknagori.github.io/my-app/"
 },
 {
     img: "./images/react-app-images/2.png",
-    desc: "This website was built using React Js, SCSS, and HTML",
+    desc: "This website was built using React Js, SCSS, and HTML. This is not a mobile responsive website. This is responsive to tablet resolution",
     link: "https://rahulknagori.github.io/my-app/"
 }],
 [{
     id: 2,
     img: "./images/real-state-website/Real Estate Website1.png",
-    desc: "This website was built using vanilla JavaScript, Bootstrap, CSS, and HTML",
+    desc: "This website was built using vanilla JavaScript, Bootstrap, CSS, and HTML. This is a dynamic mobile responsive website",
     link:"https://rahulknagori.github.io/RealEstate/index.html"
 },
 {
     img: "./images/real-state-website/Real Estate Website2.png",
-    desc: "This website was built using vanilla JavaScript, Bootstrap, CSS, and HTML",
+    desc: "This website was built using vanilla JavaScript, Bootstrap, CSS, and HTML. This is a dynamic mobile responsive website",
     link:"https://rahulknagori.github.io/RealEstate/index.html"
 },
 {
     img: "./images/real-state-website/Real Estate Website3.png",
-    desc: "This website was built using vanilla JavaScript, Bootstrap, CSS, and HTML",
+    desc: "This website was built using vanilla JavaScript, Bootstrap, CSS, and HTML. This is a dynamic mobile responsive website",
     link:"https://rahulknagori.github.io/RealEstate/index.html"
 }]
 ]
