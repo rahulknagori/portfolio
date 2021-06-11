@@ -160,17 +160,17 @@ let hidden = [[{
     id: 2,
     img: "./images/real-state-website/Real Estate Website1.png",
     desc: "This website was built using vanilla JavaScript, Bootstrap, CSS, and HTML",
-    link:"#home"
+    link:"https://rahulknagori.github.io/RealEstate/index.html"
 },
 {
     img: "./images/real-state-website/Real Estate Website2.png",
     desc: "This website was built using vanilla JavaScript, Bootstrap, CSS, and HTML",
-    link:"#home"
+    link:"https://rahulknagori.github.io/RealEstate/index.html"
 },
 {
     img: "./images/real-state-website/Real Estate Website3.png",
     desc: "This website was built using vanilla JavaScript, Bootstrap, CSS, and HTML",
-    link:"#home"
+    link:"https://rahulknagori.github.io/RealEstate/index.html"
 }]
 ]
 
