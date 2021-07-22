@@ -11,9 +11,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <main id="hero-div">
+    <!-- hidden start -->
+    <div class="overlay">
+        <div class="hidden-div">
+            <div class="hidden-img-container">
+                <img class="hidden-img" src="" alt="">
+            </div>
+            <div class="arrow">
+                <i class="fas fa-chevron-left arrow-lft "></i>
+                <i class="fas fa-chevron-right arrow-rgt"></i>
+            </div>
+            <div class="content">
+                <p class="hidden-para"></p>
+                <div class="button">
+                    <a target="_blank" class="btn-hidden-link" href=""><button class="btn-hidden">Visit Website</button></a>
+                    <i class="far fa-window-close close"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <main id="hero-div" >
         <div id="nav">
             <div class="btn">View my projects</div>
+            <a target="_blank" href="https://github.com/rahulknagori/"><div class="gitProfile">GitHub Profile</div></a>
         </div>
         <!-- header start -->
         <header class="header">
@@ -142,34 +163,32 @@
             <!-- Projects start -->
             <section id="project">
                 <h3 id="heading-about">Recent Projects</h3>
-                <!-- hidden start -->
-                <div class="hidden-div">
-                    <div class="hidden-img-container">
-                        <img class="hidden-img" src="" alt="">
-                    </div>
-                    <div class="arrow">
-                        <i class="fas fa-chevron-left arrow-lft "></i>
-                        <i class="fas fa-chevron-right arrow-rgt"></i>
-                    </div>
-                    <div class="content">
-                        <p class = "hidden-para"></p>
-                        <div class="button">
-                            <a target="_blank" class="btn-hidden-link" href=""><button class="btn-hidden">Visit Website</button></a>
-                            <i class="far fa-window-close close"></i>
-                        </div>
-                    </div>
+                <!-- project filter -->
+                <div class="filter-project">
+                    <div onclick="filter(event)">JavaScript</div>
+                    <div onclick="filter(event)">React</div>
+                    <div class="view-all" onclick="filter(event)">View All</div>
                 </div>
-                <!-- hidden section end -->
+                <!-- project filter end-->
                 <!-- project image container start -->
                 <div class="project-img-container">
-                   <div data-id="0" class="proj-img-div">
+                   <div data-id="0" class="proj-img-div   javascript">
                         <img class="project-img" src="./images/course.png" alt="">
                     </div>
-                    <div data-id="1" class="proj-img-div">
+                    <div data-id="1" class="proj-img-div  react">
                         <img class="project-img" src="./images/tv-api.png" alt="">
                     </div>
-                    <div data-id="2" class="proj-img-div">
+                    <div data-id="2" class="proj-img-div  javascript">
                         <img class="project-img" src="./images/Real Estate Website1.png" alt="">
+                    </div>
+                    <div data-id="3" class="proj-img-div  react">
+                        <img class="project-img" src="./images/react-food-order-app/1.png" alt="">
+                    </div>
+                    <div data-id="4" class="proj-img-div  react">
+                        <img class="project-img" src="./images/react-todo/1.png" alt="">
+                    </div>
+                    <div data-id="5" class="proj-img-div  javascript">
+                        <img class="project-img" src="./images/cafe-project/1.png" alt="">
                     </div>
                 </div>
             </section>

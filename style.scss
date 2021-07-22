@@ -47,7 +47,8 @@ body {
 // nav section
 #nav {
   float: right;
-  .btn {
+  .btn,
+  .gitProfile {
     padding: 0.3rem;
     background-color: transparent;
     cursor: pointer;
@@ -63,6 +64,12 @@ body {
       border: 0.2rem solid red;
       transition: border 0.4s linear;
     }
+  }
+  .gitProfile {
+    margin: 1rem 1rem;
+    border: none;
+    background-color: red;
+    border: 0.2rem solid red;
   }
 }
 // header section
@@ -315,10 +322,14 @@ body {
   padding-bottom: 3rem;
   position: relative;
   .project-img-container {
-    @include flex-dir(flex, space-around);
+    @include flex-dir(flex, center);
+    flex-wrap: wrap;
+    width: 100%;
   }
   .proj-img-div {
-    margin: 2rem 1rem;
+    margin: 1rem 1rem;
+    width: 25rem;
+    height: 15rem;
     &:hover {
       cursor: pointer;
     }
@@ -345,21 +356,65 @@ body {
   }
 
   .project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 0.5rem;
     box-shadow: 0.5rem 0.5rem 0.8rem #ddd1da;
   }
 }
 
+// filter project
+.filter-project {
+  background-color: #bfcad6;
+  margin: 0.5rem auto;
+  width: 30rem;
+  display: flex;
+  justify-content: center;
+}
+.filter-project div {
+  background-color: rgb(244, 31, 63);
+  padding: 0.5rem 0.5rem;
+  margin: 0 1rem;
+  width: 10rem;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.view-all {
+  display: none;
+}
+
 // project hidden section
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+}
 .hidden-div {
   background-color: $body-background-color;
-  width: 40%;
+  width: 40rem;
   display: flex;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   position: absolute;
   z-index: 1;
-  display: none;
+  display: "block";
   .hidden-img-container {
     width: 100%;
     position: relative;
@@ -443,7 +498,8 @@ body {
 // media query below 800px
 @media only screen and (max-width: 800px) {
   #nav {
-    .btn {
+    .btn,
+    .gitProfile {
       padding: 0.3rem;
       font-size: 1rem;
     }
