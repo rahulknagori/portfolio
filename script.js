@@ -185,12 +185,12 @@ let hidden = [
     {
       id: 3,
       img: "./images/react-food-order-app/1.png",
-      desc: "This website was built using vanilla JavaScript, Bootstrap, CSS, and HTML. This is a dynamic mobile responsive website",
+      desc: "This website was built using React Js, CSS, and HTML. This is a responsive website. Various advanced concepts like useReducer, and useContext were used.",
       link: "https://rahulknagori.github.io/react-food-order-app/",
     },
     {
       img: "./images/react-food-order-app/2.png",
-      desc: "This website was built using vanilla JavaScript, Bootstrap, CSS, and HTML. This is a dynamic mobile responsive website",
+      desc: "This website was built using React Js, CSS, and HTML. This is a responsive website. Various advanced concepts like useReducer, and useContext were used.",
       link: "https://rahulknagori.github.io/react-food-order-app/",
     },
   ],
@@ -198,17 +198,12 @@ let hidden = [
     {
       id: 4,
       img: "./images/react-todo/1.png",
-      desc: "This website was built using vanilla JavaScript, Bootstrap, CSS, and HTML. This is a dynamic mobile responsive website",
+      desc: "This website was built using React Js, CSS, and HTML.",
       link: "https://rahulknagori.github.io/react-todo/",
     },
     {
       img: "./images/react-todo/2.png",
-      desc: "This website was built using vanilla JavaScript, Bootstrap, CSS, and HTML. This is a dynamic mobile responsive website",
-      link: "https://rahulknagori.github.io/react-todo/",
-    },
-    {
-      img: "./images/real-state-website/Real Estate Website3.png",
-      desc: "This website was built using vanilla JavaScript, Bootstrap, CSS, and HTML. This is a dynamic mobile responsive website",
+      desc: "This website was built using React Js, CSS, and HTML.",
       link: "https://rahulknagori.github.io/react-todo/",
     },
   ],
