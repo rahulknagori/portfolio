@@ -12,8 +12,8 @@
 </head>
 <body>
     <!-- hidden start -->
-    <div class="overlay">
-        <div class="hidden-div">
+    <div class="overlay" id="overlayMain" onclick="overlayReset()">
+        <div class="hidden-div" onclick="stopProp(event)">
             <div class="hidden-img-container">
                 <img class="hidden-img" src="" alt="">
             </div>
@@ -47,10 +47,12 @@
                     <span class="name">u</span>
                     <span class="name">l</span>
                 </h3>
-                <p>I have more than <span class="into-para">five years of professional experience</span>. Since beginning my journey as a <span class="into-para">freelance web developer</span> nearly
-                six months ago, I've done remote work for startups, and collaborated with talented people to create digital products for
-                both business and consumer use.
-                Feel free to take a look at my latest projects in the web portfolio section.
+                <p>I have more than <span class="into-para">six years of professional experience</span>. Since beginning my journey as a <span class="into-para">freelance web developer</span> one and half years ago, I've done remote work for startups, and collaborated with talented people to create digital products for
+                both business and consumer use. 
+                <br>
+                <br>Currently I'm working in a product based start up company as a Front-End Developer.
+                Feel free to take a look at my latest projects in the web portfolio section.</br>
+                <br>
                 Contact me - <span class="into-para">rahuldevnagori@gmail.com</span></p>
                     <div class="arrow-div">
                         <i class="fas fa-angle-double-down down-arrow"></i>
@@ -76,7 +78,7 @@
                         <i class="fas fa-desktop icon"></i>
                     </div>
                     <div class="ed-para-div">
-                        <p class="ed-para">More than five years of experience as a production head and have also worked closely with web developers.</p>
+                        <p class="ed-para">More than six years of experience as a production head and have also worked closely with web developers.</p>
                     </div>
                 </div>
                 <div class="edu-main">
@@ -84,7 +86,7 @@
                         <i class="fas fa-code icon"></i>
                     </div>
                     <div class="ed-para-div">
-                        <p class="ed-para">Changed my career to freelance web development six months ago because well....</p>
+                        <p class="ed-para">Changed my career to web development one and half years ago because well....</p>
                     </div>
                 </div>
             </section>
@@ -96,7 +98,7 @@
                         <img id="myImg" src="./images/Rahul.jpg" alt="">
                     </div>
                     <div class="info">
-                        <p>I'm a freelance Front-end Developer in Mangalore, India. I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.</p>
+                        <p>I'm a Front-end Developer from Mangalore, India. I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.</p>
                     </div>
                 </section>
                 <section id="progress">
@@ -115,7 +117,7 @@
                     <div class="box">
                         <div class="inner-box">
                             <p class="inner-para">JavaScript</p>
-                            <p class="inner-para percent">79%</p>
+                            <p class="inner-para percent">80%</p>
                         </div>
                     </div>
                     <div class="box">
@@ -126,20 +128,20 @@
                     </div>
                     <div class="box">
                         <div class="inner-box">
-                            <p class="inner-para">SCSS</p>
-                            <p class="inner-para percent">60%</p>
+                            <p class="inner-para">NEXT JS</p>
+                            <p class="inner-para percent">80%</p>
                         </div>
                     </div>
                     <div class="box">
                         <div class="inner-box">
                             <p class="inner-para">React Js</p>
-                            <p class="inner-para percent">60%</p>
+                            <p class="inner-para percent">80%</p>
                         </div>
                     </div>
                     <div class="box">
                         <div class="inner-box">
                             <p class="inner-para">Node Js</p>
-                            <p class="inner-para percent">50%</p>
+                            <p class="inner-para percent">20%</p>
                         </div>
                     </div>
                 </section>
@@ -153,16 +155,16 @@
                     <div class="career-box2"></div>
                     <div class = "career-content">
                         <p class="career-para">(2019 May - 2020 July) - Entrepreneurship</p>
-                        <p class="career-para">(2017 July - 2020 November) - Degree (Business Administration)</p>
-                        <p class="career-para">(2020 July - Present) - Learning to code and improving day by day</p>
-                        <p class="career-para">(2021 January - Present) - Freelancer and learning new technologies</p>
+                        <p class="career-para">(2020 July - 2021 January) - Learning to code and improving day by day</p>
+                        <p class="career-para">(2021 January - 2021 Oct) - Freelancing and learning new technologies</p>
+                        <p class="career-para">(2021 October - Present) - Full time Front-End Developer</p>
                     </div>
                 </div>
             </section>
             <!-- Why Career gap end-->
             <!-- Projects start -->
             <section id="project">
-                <h3 id="heading-about">Recent Projects</h3>
+                <h3 id="heading-about">Projects</h3>
                 <!-- project filter -->
                 <div class="filter-project">
                     <div onclick="filter(event)">JavaScript</div>
@@ -172,8 +174,8 @@
                 <!-- project filter end-->
                 <!-- project image container start -->
                 <div class="project-img-container">
-                   <div data-id="0" class="proj-img-div   javascript">
-                        <img class="project-img" src="./images/course.png" alt="">
+                   <div data-id="0" class="proj-img-div   react">
+                        <img class="project-img" src="./images/dicebear-desktop.png" alt="">
                     </div>
                     <div data-id="1" class="proj-img-div  react">
                         <img class="project-img" src="./images/tv-api.png" alt="">
@@ -188,7 +190,7 @@
                         <img class="project-img" src="./images/react-todo/1.png" alt="">
                     </div>
                     <div data-id="5" class="proj-img-div  javascript">
-                        <img class="project-img" src="./images/cafe-project/1.png" alt="">
+                        <img class="project-img" src="./images/NextjsProj.png" alt="">
                     </div>
                 </div>
             </section>
@@ -200,7 +202,7 @@
                     <a target="_blank" href="https://www.linkedin.com/in/rahul-dev-a8a159102/"><h3 id="social-media">LinkedIn</h3></a>
                 </div>
                 <div>
-                    <p>Rahul Dev &copy;2021</p>
+                    <p>Rahul Dev &copy;2022</p>
                 </div>
                 <div>
                     <p><i class="fas fa-arrow-alt-circle-up footer-arrow"></i></p>

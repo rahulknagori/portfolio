@@ -130,36 +130,26 @@ let hidden = [
   [
     {
       id: 0,
-      img: "./images/school-app-images/1.png",
-      desc: "This website was built using vanilla JavaScript, CSS, and HTML. This is not a mobile responsive website. This is responsive to tablet resolution",
-      link: "https://rahulknagori.github.io/sellCourse/",
+      img: "./images/dicebear-desktop.png",
+      desc: "This website was built using React JS and REST API. This is fully responsive website.",
+      link: "https://dice-bear-api.vercel.app/",
     },
     {
-      img: "./images/school-app-images/2.png",
-      desc: "This website was built using vanilla JavaScript, CSS, and HTML. This is not a mobile responsive website. This is responsive to tablet resolution",
-      link: "https://rahulknagori.github.io/sellCourse/",
-    },
-    {
-      img: "./images/school-app-images/4.png",
-      desc: "This website was built using vanilla JavaScript, CSS, and HTML. This is not a mobile responsive website. This is responsive to tablet resolution",
-      link: "https://rahulknagori.github.io/sellCourse/",
-    },
-    {
-      img: "./images/school-app-images/3.png",
-      desc: "This website was built using vanilla JavaScript, CSS, and HTML. This is not a mobile responsive website. This is responsive to tablet resolution",
-      link: "https://rahulknagori.github.io/sellCourse/",
+      img: "./images/dicebear-mob.png",
+      desc: "This website was built using React JS and REST API. This is fully responsive website.",
+      link: "https://dice-bear-api.vercel.app/",
     },
   ],
   [
     {
       id: 1,
       img: "./images/react-app-images/1.png",
-      desc: "This website was built using React Js, SCSS, and HTML. This is not a mobile responsive website. This is responsive to tablet resolution",
+      desc: "This website was built using React Js, REST API, SCSS, and HTML. This is not a mobile responsive website. This is responsive to tablet resolution",
       link: "https://rahulknagori.github.io/my-app/",
     },
     {
       img: "./images/react-app-images/2.png",
-      desc: "This website was built using React Js, SCSS, and HTML. This is not a mobile responsive website. This is responsive to tablet resolution",
+      desc: "This website was built using React Js, REST API, SCSS, and HTML. This is not a mobile responsive website. This is responsive to tablet resolution",
       link: "https://rahulknagori.github.io/my-app/",
     },
   ],
@@ -210,14 +200,14 @@ let hidden = [
   [
     {
       id: 5,
-      img: "./images/cafe-project/1.png",
-      desc: "This website was built using vanilla JavaScript, Bootstrap, CSS, and HTML. This is a dynamic mobile responsive website",
-      link: "#",
+      img: "./images/NextjsProj.png",
+      desc: "This project was done using NEXT JS. The UI is responsive.",
+      link: "https://buidlers.vercel.app/",
     },
     {
-      img: "./images/cafe-project/2.png",
-      desc: "This website was built using vanilla JavaScript, Bootstrap, CSS, and HTML. This is a dynamic mobile responsive website",
-      link: "#",
+      img: "./images/NextResponsive.png",
+      desc: "This project was done using NEXT JS. The UI is responsive.",
+      link: "https://buidlers.vercel.app/",
     },
   ],
 ];
@@ -316,6 +306,10 @@ hiddenCloseBtn.addEventListener("click", () => {
   }
   overlayReset();
 });
+
+function stopProp(e) {
+  e.stopPropagation();
+}
 
 //filter for JavaScript and React
 
