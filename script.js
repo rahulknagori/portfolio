@@ -187,14 +187,19 @@ let hidden = [
   [
     {
       id: 4,
-      img: "./images/react-todo/1.png",
-      desc: "This website was built using React Js, CSS, and HTML.",
-      link: "https://rahulknagori.github.io/react-todo/",
+      img: "./images/flybrod/1.png",
+      desc: "This website was built using Next js and Tailwind CSS and hosted in Vercel",
+      link: "https://www.flybrod.com/",
     },
     {
-      img: "./images/react-todo/2.png",
-      desc: "This website was built using React Js, CSS, and HTML.",
-      link: "https://rahulknagori.github.io/react-todo/",
+      img: "./images/flybrod/2.png",
+      desc: "This website and overall score of 99 in Google Lighthouse",
+      link: "https://www.flybrod.com/",
+    },
+    {
+      img: "./images/flybrod/3.png",
+      desc: "The page was designed using Figma",
+      link: "https://www.flybrod.com/",
     },
   ],
   [

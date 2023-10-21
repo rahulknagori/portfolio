@@ -357,7 +357,7 @@ body {
   transition: 2s linear;
 }
 
-.career-gap {
+.career-journey {
   background-color: #ddd1da;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -786,11 +786,11 @@ body {
   .skils-display #progress {
     width: 95%;
   }
-  .career-gap .career-box1,
-  .career-gap .career-box2 {
+  .career-journey .career-box1,
+  .career-journey .career-box2 {
     height: 40rem;
   }
-  .career-gap .career-content .career-para {
+  .career-journey .career-content .career-para {
     font-size: 1rem;
   }
 }
